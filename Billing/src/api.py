@@ -20,7 +20,6 @@ def index():
 @app.route('/provider',methods=['POST'])
 def Insert_provider():
     sql = "INSERT INTO Provider (id,name) VALUES (%s,%s)"
-    #print(request.form['name'])
     val = ('9',request.form['name'])
     mycursor.execute(sql, val)
 
